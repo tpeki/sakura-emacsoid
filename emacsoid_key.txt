@@ -99,7 +99,7 @@ Ctrl+→	単語の右端に移動	WordRight	30321	○
 Ctrl+↓	テキストを１行上へスクロール	F_WndScrollUp	30381	×
 Ctrl+PgDn(RollUp)	半ページダウン	HalfPageDown	30341	○
 Ctrl+PgUp(RollDn)	半ページアップ	HalfPageUp	30340	○
-Ctrl+Space	入力補完	Complete	31430	×
+Ctrl+Space	範囲選択開始	BeginSelect	30410	○
 Ctrl+1	ツールバーの表示／非表示	ShowToolbar	31100	×
 Ctrl+2	ファンクションキーの表示／非表示	ShowFunckey	31101	×
 Ctrl+3	ステータスバーの表示／非表示	ShowStatusbar	31102	×
@@ -107,39 +107,38 @@ Ctrl+4	タイプ別設定一覧...	TypeList	31110	×
 Ctrl+5	タイプ別設定...	OptionType	31111	×
 Ctrl+6	共通設定...	OptionCommon	31112	×
 Ctrl+7	フォント設定...	SelectFont	31120	×
-Ctrl+A	すべて選択	SelectAll	30401	○
-Ctrl+B	ブラウズ	Browse	30180	×
+Ctrl+A	行頭に移動(折り返し単位)	GoLineTop	30332	○
+Ctrl+B	カーソル左移動	Left	30313	○
 Ctrl+C	コピー	Copy	30602	○
-Ctrl+D	単語切り取り	WordCut	30232	○
-Ctrl+E	行切り取り(折り返し単位)	CutLine	30244	○
-Ctrl+F	検索...	SearchDialog	30901	×
+Ctrl+D	削除	Delete	30221	○
+Ctrl+E	行末に移動(折り返し単位)	GoLineEnd	30333	○
+Ctrl+F	カーソル右移動	Right	30314	○
 Ctrl+G	Grep...		30910	×
-Ctrl+H	カーソル行をウィンドウ中央へ	CurLineCenter	30360	○
-Ctrl+I	行の二重化(折り返し単位)	DuplicateLine	30250	○
+Ctrl+H	カーソル前を削除	DeleteBack	30222	○
+Ctrl+I	TABインデント	IndentTab	30260	○
 Ctrl+J	指定行へジャンプ...		30920	×
-Ctrl+K	行末まで切り取り(改行単位)	LineCutToEnd	30241	○
-Ctrl+L	キーマクロの読み込み		31252	×
-Ctrl+M	キーマクロの保存		31251	×
-Ctrl+N	新規作成	FileNew	30101	×
+Ctrl+K	行末まで削除(改行単位)	LineDeleteToEnd	30243	○
+Ctrl+N	カーソル下移動	Down	30312	○
 Ctrl+O	開く...		30102	×
-Ctrl+P	印刷...	Print	30150	×
-Ctrl+Q	キー割り当て一覧をコピー	CopyKeyBindList	30630	○
-Ctrl+R	置換...	ReplaceDialog	30904	×
-Ctrl+S	上書き保存	FileSave	30103	×
+Ctrl+P	カーソル上移動	Up	30311	○
+Ctrl+Q	コントロールコード入力...	CtrlCodeDialog	30792	×
+Ctrl+R	後方インクリメンタルサーチ		30982	×
+Ctrl+S	前方インクリメンタルサーチ		30981	×
 Ctrl+T	タグジャンプ	TagJump	30940	○
 Ctrl+U	行頭まで切り取り(改行単位)	LineCutToStart	30240	○
 Ctrl+V	貼り付け	Paste	30604	○
-Ctrl+W	現在位置の単語選択	SelectWord	30400	○
-Ctrl+X	切り取り	Cut	30601	○
-Ctrl+Y	やり直し	Redo	30211	○
+Ctrl+W	切り取り	Cut	30601	○
+Ctrl+X	メニュー2	CustMenu2	31502	×
+Ctrl+Y	貼り付け	Paste	30604	○
 Ctrl+Z	元に戻す	Undo	30210	○
 Ctrl+-	このファイル名をコピー	CopyFilename	30622	○
 Ctrl+^(英語')	このファイルのパス名とカーソル位置をコピー	CopyTag	30621	○
 Ctrl+\	このファイルのパス名をコピー	CopyPath	30620	○
 Ctrl+@(英語`)	選択範囲内全行コピー	CopyLines	30610	○
-Ctrl+[	対括弧の検索	BracketPair	30960	○
-Ctrl+:	選択範囲内全行行番号付きコピー	CopyLinesWithLineNumber	30612	○
-Ctrl+]	対括弧の検索	BracketPair	30960	○
+Ctrl+[	フォントサイズ縮小		31123	×
+Ctrl+;	折り返さない		31141	×
+Ctrl+:	指定桁で折り返す		31142	×
+Ctrl+]	フォントサイズ拡大		31122	×
 Ctrl+.	選択範囲内全行引用符付きコピー	CopyLinesAsPassage	30611	○
 Ctrl+/	入力補完	Complete	31430	×
 Ctrl+_	元に戻す	Undo	30210	○
@@ -171,19 +170,21 @@ Shift+Ctrl+2	メニュー22	CustMenu22	31522	×
 Shift+Ctrl+3	メニュー23	CustMenu23	31523	×
 Shift+Ctrl+4	タブメニュー	CustMenu24	31524	×
 Shift+Ctrl+C	同名のC/C++ヘッダー(ソース)を開く	OpenHfromtoC	30162	×
-Shift+Ctrl+D	単語削除	WordDelete	30233	○
-Shift+Ctrl+E	行削除(折り返し単位)	DeleteLine	30245	○
 Shift+Ctrl+H	同名のC/C++ヘッダー(ソース)を開く	OpenHfromtoC	30162	×
-Shift+Ctrl+K	行末まで削除(改行単位)	LineDeleteToEnd	30243	○
+Shift+Ctrl+K	行末まで切り取り(改行単位)	LineCutToEnd	30241	○
 Shift+Ctrl+L	キーマクロの実行		31253	×
 Shift+Ctrl+M	キーマクロの記録開始／終了		31250	×
 Shift+Ctrl+P	印刷プレビュー	PrintPreview	30151	×
+Shift+Ctrl+Q	キー割り当て一覧をコピー	CopyKeyBindList	30630	○
 Shift+Ctrl+S	名前を付けて保存...	FileSaveAsDialog	30104	×
 Shift+Ctrl+T	タグジャンプバック	TagJumpBack	30941	○
 Shift+Ctrl+U	行頭まで削除(改行単位)	LineDeleteToStart	30242	○
+Shift+Ctrl+Y	やり直し	Redo	30211	○
 Shift+Ctrl+-	上下に分割／分割解除	SplitWinV	31310	×
 Shift+Ctrl+\	左右に分割／分割解除	SplitWinH	31311	×
 Shift+Ctrl+;	縦横に分割／分割解除	SplitWinVH	31312	×
+Shift+Ctrl+,	ファイルの先頭に移動	GoFileTop	30350	○
+Shift+Ctrl+.	ファイルの最後に移動	GoFileEnd	30351	○
 Shift+Ctrl+アプリキー	右クリックメニュー	RMenu	31580	×
 Alt+ダブルクリック	現在位置の単語選択	SelectWord	30400	○
 Alt+トリプルクリック	1行選択	SelectLine	30403	○
@@ -212,7 +213,7 @@ Alt+↓	(矩形選択)カーソル下移動	Down_BoxSel	30512	○
 Alt+PgDn(RollUp)	(矩形選択)１ページダウン	PageDown_BoxSel	30543	○
 Alt+PgUp(RollDn)	(矩形選択)１ページアップ	PageUp_BoxSel	30542	○
 Alt+0	メニュー10	CustMenu10	31510	×
-Alt+1	メニュー1	CustMenu1	31501	×
+Alt+1	日付挿入	InsertDate	30790	○
 Alt+2	メニュー2	CustMenu2	31502	×
 Alt+3	メニュー3	CustMenu3	31503	×
 Alt+4	メニュー4	CustMenu4	31504	×
@@ -221,15 +222,22 @@ Alt+6	メニュー6	CustMenu6	31506	×
 Alt+7	メニュー7	CustMenu7	31507	×
 Alt+8	メニュー8	CustMenu8	31508	×
 Alt+9	メニュー9	CustMenu9	31509	×
-Alt+A	選択行の昇順ソート	SortAsc	30282	○
-Alt+D	選択行の降順ソート	SortDesc	30283	○
+Alt+A	すべて選択	SelectAll	30401	○
+Alt+C	コピー	Copy	30602	○
+Alt+D	単語削除	WordDelete	30233	○
+Alt+I	タブを左に移動	TabMoveLeft	31384	×
 Alt+L	左(先頭)の空白を削除	LTrim	30280	○
 Alt+M	連続した重複行の削除(uniq)	Merge	30284	○
 Alt+N	移動履歴: 次へ	MoveHistNext	30371	○
 Alt+P	移動履歴: 前へ	MoveHistPrev	30370	○
 Alt+R	右(末尾)の空白を削除	RTrim	30281	○
+Alt+S	選択行の昇順ソート	SortAsc	30282	○
+Alt+V	半ページダウン	HalfPageDown	30341	○
+Alt+W	コピー	Copy	30602	○
+Alt+X	切り取り	Cut	30601	○
 Alt+;	日付挿入	InsertDate	30790	○
 Alt+:	時刻挿入	InsertTime	30791	○
+Alt+]	対括弧の検索	BracketPair	30960	○
 Alt+アプリキー	右クリックメニュー	RMenu	31580	×
 Shift+Alt+ダブルクリック	現在位置の単語選択	SelectWord	30400	○
 Shift+Alt+トリプルクリック	1行選択	SelectLine	30403	○
@@ -254,6 +262,9 @@ Shift+Alt+6	メニュー16	CustMenu16	31516	×
 Shift+Alt+7	メニュー17	CustMenu17	31517	×
 Shift+Alt+8	メニュー18	CustMenu18	31518	×
 Shift+Alt+9	メニュー19	CustMenu19	31519	×
+Shift+Alt+D	単語切り取り	WordCut	30232	○
+Shift+Alt+S	選択行の降順ソート	SortDesc	30283	○
+Shift+Alt+V	半ページアップ	HalfPageUp	30340	○
 Shift+Alt+アプリキー	右クリックメニュー	RMenu	31580	×
 Ctrl+Alt+ダブルクリック	現在位置の単語選択	SelectWord	30400	○
 Ctrl+Alt+トリプルクリック	1行選択	SelectLine	30403	○
@@ -278,7 +289,6 @@ Ctrl+Alt+→	(矩形選択)単語の右端に移動	WordRight_BoxSel	30521	○
 Ctrl+Alt+↓	(矩形選択)カーソル下移動(２行ごと)	Down2_BoxSel	30516	○
 Ctrl+Alt+PgDn(RollUp)	(矩形選択)半ページダウン	HalfPageDown_BoxSel	30541	○
 Ctrl+Alt+PgUp(RollDn)	(矩形選択)半ページアップ	HalfPageUp_BoxSel	30540	○
-Ctrl+Alt+E	重ねて表示	CascadeWin	31330	×
 Ctrl+Alt+H	上下に並べて表示	TileWinV	31331	×
 Ctrl+Alt+L	小文字	ToLower	30800	○
 Ctrl+Alt+P	印刷ページ設定...	PrintPageSetup	30152	×

@@ -1,4 +1,4 @@
-キー	機能名	関数名	機能番号	キーマクロ記録可/不可
+﻿キー	機能名	関数名	機能番号	キーマクロ記録可/不可
 -----	-----	-----	-----	-----
 ダブルクリック	現在位置の単語選択	SelectWord	30400	○
 右クリック	右クリックメニュー	RMenu	31580	×
@@ -100,6 +100,7 @@ Ctrl+↓	テキストを１行上へスクロール	F_WndScrollUp	30381	×
 Ctrl+PgDn(RollUp)	半ページダウン	HalfPageDown	30341	○
 Ctrl+PgUp(RollDn)	半ページアップ	HalfPageUp	30340	○
 Ctrl+Space	範囲選択開始	BeginSelect	30410	○
+Ctrl+0	印刷・再読込	CustMenu3	31503	×
 Ctrl+1	ツールバーの表示／非表示	ShowToolbar	31100	×
 Ctrl+2	ファンクションキーの表示／非表示	ShowFunckey	31101	×
 Ctrl+3	ステータスバーの表示／非表示	ShowStatusbar	31102	×
@@ -119,7 +120,7 @@ Ctrl+I	TABインデント	IndentTab	30260	○
 Ctrl+J	指定行へジャンプ...		30920	×
 Ctrl+K	行末まで削除(改行単位)	LineDeleteToEnd	30243	○
 Ctrl+N	カーソル下移動	Down	30312	○
-Ctrl+O	開く...		30102	×
+Ctrl+O	新規作成	FileNew	30101	×
 Ctrl+P	カーソル上移動	Up	30311	○
 Ctrl+Q	コントロールコード入力...	CtrlCodeDialog	30792	×
 Ctrl+R	後方インクリメンタルサーチ		30982	×
@@ -128,17 +129,18 @@ Ctrl+T	タグジャンプ	TagJump	30940	○
 Ctrl+U	行頭まで切り取り(改行単位)	LineCutToStart	30240	○
 Ctrl+V	貼り付け	Paste	30604	○
 Ctrl+W	切り取り	Cut	30601	○
-Ctrl+X	メニュー2	CustMenu2	31502	×
+Ctrl+X	C-x	CustMenu2	31502	×
 Ctrl+Y	貼り付け	Paste	30604	○
 Ctrl+Z	元に戻す	Undo	30210	○
 Ctrl+-	このファイル名をコピー	CopyFilename	30622	○
 Ctrl+^(英語')	このファイルのパス名とカーソル位置をコピー	CopyTag	30621	○
 Ctrl+\	このファイルのパス名をコピー	CopyPath	30620	○
-Ctrl+@(英語`)	選択範囲内全行コピー	CopyLines	30610	○
+Ctrl+@(英語`)	行切り取り(折り返し単位)	CutLine	30244	○
 Ctrl+[	フォントサイズ縮小		31123	×
 Ctrl+;	折り返さない		31141	×
 Ctrl+:	指定桁で折り返す		31142	×
 Ctrl+]	フォントサイズ拡大		31122	×
+Ctrl+,	折り返し位置に改行をつけてコピー	CopyAddCRLF	30608	○
 Ctrl+.	選択範囲内全行引用符付きコピー	CopyLinesAsPassage	30611	○
 Ctrl+/	入力補完	Complete	31430	×
 Ctrl+_	元に戻す	Undo	30210	○
@@ -182,6 +184,7 @@ Shift+Ctrl+U	行頭まで削除(改行単位)	LineDeleteToStart	30242	○
 Shift+Ctrl+Y	やり直し	Redo	30211	○
 Shift+Ctrl+-	上下に分割／分割解除	SplitWinV	31310	×
 Shift+Ctrl+\	左右に分割／分割解除	SplitWinH	31311	×
+Shift+Ctrl+@(英語`)	行削除(折り返し単位)	DeleteLine	30245	○
 Shift+Ctrl+;	縦横に分割／分割解除	SplitWinVH	31312	×
 Shift+Ctrl+,	ファイルの先頭に移動	GoFileTop	30350	○
 Shift+Ctrl+.	ファイルの最後に移動	GoFileEnd	30351	○
@@ -212,16 +215,15 @@ Alt+→	(矩形選択)カーソル右移動	Right_BoxSel	30514	○
 Alt+↓	(矩形選択)カーソル下移動	Down_BoxSel	30512	○
 Alt+PgDn(RollUp)	(矩形選択)１ページダウン	PageDown_BoxSel	30543	○
 Alt+PgUp(RollDn)	(矩形選択)１ページアップ	PageUp_BoxSel	30542	○
-Alt+0	メニュー10	CustMenu10	31510	×
+Alt+0	グループを閉じる	GroupClose	31380	×
 Alt+1	日付挿入	InsertDate	30790	○
-Alt+2	メニュー2	CustMenu2	31502	×
-Alt+3	メニュー3	CustMenu3	31503	×
-Alt+4	メニュー4	CustMenu4	31504	×
-Alt+5	メニュー5	CustMenu5	31505	×
-Alt+6	メニュー6	CustMenu6	31506	×
-Alt+7	メニュー7	CustMenu7	31507	×
-Alt+8	メニュー8	CustMenu8	31508	×
-Alt+9	メニュー9	CustMenu9	31509	×
+Alt+2	時刻挿入	InsertTime	30791	○
+Alt+3	最近使ったフォルダー挿入	InsertFolderUsedRecently	30795	○
+Alt+4	最近使ったファイル挿入	InsertFileUsedRecently	30794	○
+Alt+5	印刷・再読込	CustMenu3	31503	×
+Alt+7	グループ化		31333	×
+Alt+8	重ねて表示	CascadeWin	31330	×
+Alt+9	左右に並べて表示	TileWinH	31332	×
 Alt+A	すべて選択	SelectAll	30401	○
 Alt+C	コピー	Copy	30602	○
 Alt+D	単語削除	WordDelete	30233	○
@@ -253,15 +255,7 @@ Shift+Alt+F8	SJIS→UTF-8コード変換	SJIStoUTF8	30862	○
 Shift+Alt+F10	SJIS→EUCコード変換	SJIStoEUC	30861	○
 Shift+Alt+F11	SJIS→JISコード変換	SJIStoJIS	30860	○
 Shift+Alt+0	メニュー20	CustMenu20	31520	×
-Shift+Alt+1	メニュー11	CustMenu11	31511	×
-Shift+Alt+2	メニュー12	CustMenu12	31512	×
-Shift+Alt+3	メニュー13	CustMenu13	31513	×
-Shift+Alt+4	メニュー14	CustMenu14	31514	×
-Shift+Alt+5	メニュー15	CustMenu15	31515	×
-Shift+Alt+6	メニュー16	CustMenu16	31516	×
-Shift+Alt+7	メニュー17	CustMenu17	31517	×
-Shift+Alt+8	メニュー18	CustMenu18	31518	×
-Shift+Alt+9	メニュー19	CustMenu19	31519	×
+Shift+Alt+1	印刷・再読込	CustMenu3	31503	×
 Shift+Alt+D	単語切り取り	WordCut	30232	○
 Shift+Alt+S	選択行の降順ソート	SortDesc	30283	○
 Shift+Alt+V	半ページアップ	HalfPageUp	30340	○

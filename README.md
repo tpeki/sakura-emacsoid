@@ -5,11 +5,17 @@
  - Cut -> C-w
  - Paste -> C-y, C-v ; Gates
  - Copy -> C-c ; Gates
- - grep -> C-g ; Cancel action is bound to ESC
+ - grep -> M-g
+ - Cancel -> C-g ; incremental search, ...
+ - Shift-C-s / Shift-C-r -> migemo incremental search (if Migemo installed)
+ - M-N/M-P -> search Next / Previous
+ - C-t -> search dialog
 
 ## Some 2 stroke keys follows C-x are represented by Menu2 (C-x C-o, C-x C-f, ...)
 
- - M-2 - M-0 are under construction
+ - C-x -> extend menu ; Ctrl has no effect to second key stroke. 
+ - C-x 4 -> Window handling and PrettyPrint
+ 
 ## invoke external macro example
 
  - Every js-files put into external macro dir (default=exe folder), and set External Macro

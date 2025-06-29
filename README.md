@@ -28,5 +28,5 @@
  |No.3|PrettyPrint choosed XML Regeon|PrettyPrintXML.js|C-x 4 x|
  |No.4|Change RW/RO (Toggle)|ToggleReadOnly.js|C-x q|
 
-2025/06/26 initial version
-2025/06/29 extend with External Macro
+- 2025/06/26 initial version
+- 2025/06/29 extend with External Macro

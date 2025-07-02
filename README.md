@@ -1,25 +1,25 @@
 # Emacs like keybind for SakuraEditor
 ## Any keys in windows flavor
 
- - Select all -> M-a
- - Cut -> C-w
- - Paste -> C-y, C-v ; Gates
- - Copy -> C-c ; Gates
- - grep -> M-g
- - Cancel -> C-g ; incremental search, ...
- - Shift-C-s / Shift-C-r -> migemo incremental search (if Migemo installed)
- - M-N/M-P -> search Next / Previous
- - C-t -> search dialog
+ - M-a -> Select all 
+ - Cut -> C-w or C-x with selected text
+ - Paste -> C-y, C-v
+ - Copy -> C-c
 
-## Some 2 stroke keys follows C-x are represented by Menu2 (C-x C-o, C-x C-f, ...)
+## Search mode settings
+ - Search dialog -> C-t
+ - incremental search -> C-s / C-r
+ - migemo incremental search -< Shift-C-s / Shift-C-r ; if C/Migemo installed
+ - Cancel -> C-g ; cancel any modes such as incremental search, ...
+ - Search Next (also F3) / Previous (also Shift-F3) -> M-N/M-P 
 
+## Some multi stroke keys are represented by CustMenu
  - C-x (exist selected text) -> Cut to buffer
  - C-x (without selected text) -> extend menu ; Ctrl has no effect to second key stroke. 
  - C-x 4 -> Window handling and PrettyPrint
  
 ## invoke external macro example
-
- - Every js-files put into external macro dir (default=exe folder), and set External Macro
+ - Every js-files put into external macro dir (default = %appdata%\sakura), and set External Macro
 
  |No.|Name|FileName|Key|
  |--|--|--|--|

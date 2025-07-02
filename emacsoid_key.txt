@@ -1,4 +1,4 @@
-﻿キー	機能名	関数名	機能番号	キーマクロ記録可/不可
+キー	機能名	関数名	機能番号	キーマクロ記録可/不可
 -----	-----	-----	-----	-----
 ダブルクリック	現在位置の単語選択	SelectWord	30400	○
 右クリック	右クリックメニュー	RMenu	31580	×
@@ -129,7 +129,7 @@ Ctrl+T	検索...	SearchDialog	30901	×
 Ctrl+U	行頭まで切り取り(改行単位)	LineCutToStart	30240	○
 Ctrl+V	貼り付け	Paste	30604	○
 Ctrl+W	切り取り	Cut	30601	○
-Ctrl+X	C-x	CustMenu2	31502	×
+Ctrl+X	C-x (Cut or Menu2)		31605	×
 Ctrl+Y	貼り付け	Paste	30604	○
 Ctrl+Z	元に戻す	Undo	30210	○
 Ctrl+-	このファイル名をコピー	CopyFilename	30622	○
